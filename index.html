@@ -2,17 +2,31 @@
 	<head>
 	</head>
 	<body>
-		<h3>CS184/284A Project Webpages</h3>
+		<h1>Final Project Milestone</h1>
 		<br><br>
-		<a href="/proj1/index.html">Project 1</a>
+By Prince Wang, Stephen Yang, Rory Na, Christian Kim
 		<br><br>
-		<a href="/proj2/index.html">Project 2</a>
-		<br><br>
-		<a href="/proj3-1/index.html">Project 3-1</a>
-		<br><br>
-		<a href="/proj3-2/index.html">Project 3-2</a>
-		<br><br>
-		<a href="/proj4/index.html">Project 4</a>
+<h2>What we have tried so far:</h2>
+<br>
+We noticed that there were already a large number of existing snow simulation implementations. Initially, we thought that it would be relatively easy to find a suitable project to build off of. We focused on comparing different snow simulation repos to use and ended up spending a lot of time trying to get them to run on our own machines. Ultimately, we failed to run most of them and found that it was way too much work trying to resolve dependencies and fiddle with other implementations that were really old, no longer supported, and very difficult to get working. Because of this, we decided against using an existing implementation as our foundation and expanding on it in ways that would make for a more unique project. Instead, we would restart and go back to making the bulk of the snow simulation on our own.
+<br>
+		<h2>Preliminary results:</h2>
+		<br>
+Currently, we've started with a very simple 2D snowfall simulation written in Python. We randomly generate a mountain object in the scene every time the simulation is run. 
+Snow particles fall from the top of the scene at intervals, and we update the position of every active snow particle at every tick. If the snow particle comes into contact with the mountain object, its position will not be updated in the future. We can make the snow particles accumulate at the top of the mountain by keeping track of the particles' positions. We also have simulated wind that "blows" the snow particles when they're in the air.
+		<br>
+		<a href="https://drive.google.com/file/d/1XRN-mDP6RWVupYaoAhdIbOURTO2YSHnB/view?usp=sharing">Video link</a>
+		<br>
+		<a href=" https://docs.google.com/presentation/d/1KehhQ7PeT2sFyBPFtUMB6ixtC9h_E5VD6ASy5LPAShY/edit?usp=sharingl">Slides</a>
+<br>
+		<h3>Reflection on progress:</h3>
+		<br>
+Our initial plan was avalanche simulation, but the idea turned out to be too difficult to implement. We are lost about how to go from snow simulation to avalanche simulation, which seems to involve complexity orders of magnitude larger. So, we decided to work towards a goal that is more achievable, more easily understandable and more reproducible for both our team members and anyone who might view our work in the future.
+<br>
+		<h4>Future work plan:</h4>
+		<br>
+Our next step forward would be to decide on a framework to use. We could keep building on our existing work, use a game engine or explore other options. We would also implement procedural terrain generation to create mountains in 3D. Besides turning everything into a 3D simulation, we would also add much more sophisticated physics for simulating the snow, as well as inter-particle interaction. Additionally, we would create shaders for both the snow and the mountain. After those steps, we could look into simulate crack propagation akin to the results shown in the paper presented by Gaume et al. or integrate NeRF into our project.
+<br>
 	</body>
 	<script>
 		var links = document.body.getElementsByTagName("a")
